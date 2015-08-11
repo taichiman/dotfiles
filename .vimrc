@@ -41,6 +41,8 @@ set splitbelow
 set ignorecase
 set smartcase
 
+set syntax off
+
 :let mapleader = ','
 
 "Enable copying to clipboard using `CTRL + c`
@@ -55,7 +57,13 @@ noremap <Right> <nop>
 "noremap k <NOP>
 "noremap l <NOP>
 
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
 nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+nmap <silent> <C-\> :NERDTreeFind<CR>
 
 iabbrev pry binding.pry
 iabbrev saop save_and_open_page
