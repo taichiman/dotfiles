@@ -1,0 +1,53 @@
+[user]
+	name = Denis Krivostchokov
+	email = densomart@gmail.com
+
+[github]
+	user = Densom
+	token = d56a38d0c0ef83cffc482b8e2982d092
+
+[color]
+	ui = true
+
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+	pager = true
+
+[core]
+	excludesfile = /home/densom/.gitignore_global
+	editor = vi
+
+[merge]
+	summary=true
+
+[alias]
+	b = branch -v
+	r = remote -v
+	t = tag -l
+	cp = cherry-pick -x
+	co = checkout
+	br = branch
+	ci = commit
+	st = status -sb
+	ds = diff --staged
+	amend = commit --amend -C HEAD
+	undo = reset --soft HEAD^
+ 	unstage = reset HEAD --
+	uncommit = reset --soft HEAD^
+ 	last = log -1 HEAD
+ 	up = pull --rebase
+ 	put = push origin HEAD
+ 	latest = for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short) [%(committername)]'
+  ls = log --decorate --pretty=format:'%C(auto) %h %Cred %p %Cgreen - %cr : %Creset %s' 
+	lso = log --pretty=format:'%h - %an, %ar : %s'
+	gr = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+
+
+  a = add .
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
