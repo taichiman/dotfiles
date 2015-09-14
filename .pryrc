@@ -15,3 +15,5 @@ if defined?(PryByebug)
   end
 end
 
+Pry.config.editor = 'vim'
+

@@ -1,0 +1,1 @@
+sudo find /etc/ -name *tty* -exec ls -dl --group-directories-first {} +

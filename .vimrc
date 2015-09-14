@@ -12,6 +12,8 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-unimpaired.git'
 Plugin 'tpope/vim-surround.git'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'wakatime/vim-wakatime'
 call vundle#end()
 execute pathogen#infect()
 
@@ -40,8 +42,11 @@ set splitbelow
 
 set ignorecase
 set smartcase
+set smartindent
 
-set syntax off
+set nu
+
+:syntax off
 
 :let mapleader = ','
 
@@ -129,10 +134,11 @@ autocmd FocusLost * :wa
 "let g:ctrlp_max_files = 0
 
 " Ignore these directories
-"set wildignore+=*/log/**
-"set wildignore+=*/tmp/**
+set wildignore+=*/log/**
+set wildignore+=*/tmp/**
+set wildignore+=*/doc/**
 set autoread
 
 "for Rspec
-let g:rspec_command = "!rspec --color {spec}"
+let g:rspec_command = "!spring rspec --format doc {spec}"
 
