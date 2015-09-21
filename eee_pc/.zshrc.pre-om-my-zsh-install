@@ -1,0 +1,19 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/denis/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+#The function will not be run in future, but you can run
+#it yourself as follows:
+  #autoload -Uz zsh-newuser-install
+  #zsh-newuser-install -f
+
